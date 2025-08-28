@@ -1,0 +1,18 @@
+from gtts import gTTS
+
+# Inserisci qui il testo che vuoi leggere
+testo = """
+L'albero che scelgo sembra stagliarsi sopra gli altri. Risalgo i rami ritorti tenendomi vicino al tronco, perché non ho idea di quanto
+siano resistenti questi rami gommosi. Però mi spingo più in alto di quanto sarebbe prudente fare, perché c'è qualcosa che devo vedere.
+Mentre mi stringo alla cima flessibile del tronco, ondeggiando avanti e indietro nell'aria umida, i miei sospetti vengono confermati.
+C'è un motivo per cui non riusciamo a girare a sinistra e non potremo mai farlo. Da questo precario punto d'osservazione vedo per la prima volta la forma di tutta l'arena. Un cerchio perfetto...
+"""
+
+# Genera audio con gTTS (Google Text-to-Speech)
+tts = gTTS(text=testo, lang='it', slow=False)
+
+# Salva in un file MP3
+tts.save("lettura.mp3")
+
+print("✅ File audio 'lettura.mp3' generato con successo!")
+bash
